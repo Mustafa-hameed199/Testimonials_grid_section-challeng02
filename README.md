@@ -1,1 +1,3 @@
-# Testimonials_grid_section-challeng02
+# Frontend Mentor - Testimonials grid section
+
+## Welcome! 👋

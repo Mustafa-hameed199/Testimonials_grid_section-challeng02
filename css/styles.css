@@ -1,0 +1,191 @@
+/* Start global rules  */
+*, *::before,*::after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+/* End global rules  */
+/* Start variables */
+:root{
+    --violet-card: hsl(263, 55%, 52%);
+    --gray-card:hsl(217, 19%, 35%);
+    --dark-card:hsl(219, 29%, 14%);
+}
+/*  End variables */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10px ;
+    max-width: 100vw;
+    background-color: hsl(210, 46%, 95%)
+}
+    .container .cards{
+        flex-basis: 90%;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 25px;
+    }
+    /*--------------------------------------- Start all cards  ------------*/
+    .card .head img{
+        border-radius: 50%;
+        width: 30px;
+        margin-right: 15px;
+        border: solid 2px
+    }
+    .cards .card:not(:nth-child(3)){
+        color: white;
+    }
+    .cards .card{
+        border-radius:  10px;
+        padding: 25px
+    }
+    .cards .card .head{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        align-content: center;
+        margin-bottom: 20px
+    }
+    .cards .card:not(:last-child) .head .name{
+        color: hsl(0, 0%, 81%)
+    }
+    .cards .card .head .name small{
+        opacity: 50%
+    }
+    .cards .card:not(:last-child) .footer p{
+        color: hsl(0, 0%, 81%);
+        opacity: 70%
+    }
+    .cards .card .body {
+        margin-bottom:  15px;
+    }
+    .cards .card .footer p {
+        display: flex;
+        line-height: 1.4;
+        padding-right: 5px
+    }
+    
+    /*--------------------------------------- End all cards  ------------*/
+    
+    .card-1{
+        background-color: var(--violet-card);
+        position: relative;
+    }
+    .cards .card-1 .head {
+        position: relative;
+    }
+    .cards .card-1 svg{
+        position: absolute;
+        right: 20px;
+        top: 0
+    }
+    .card-1 .head img{
+        border-color: hsla(263, 55%, 70% , 100%)
+    }
+    .card-1 .body h2{
+        position: relative;
+        padding-right: 12px
+    }
+    .cards .card:first-child .footer p{
+        padding-right: 20px;
+    }
+    .card-2{
+        background-color:var(--gray-card);
+    }
+    .card-2 .head img{
+        border: none
+    }
+    
+    .card-3{
+        background-color: white;
+    }
+    .card-3 .head img{
+        border: none
+    }
+    .cards .card:nth-child(3) .head .name{
+        color: hsl(217, 19%, 35%)
+    }
+    .cards .card:nth-child(3) .footer p{
+        color: hsl(217, 19%, 35%);
+        opacity: 70%
+    }
+    .cards .card-3 .body h2,
+    .cards .card-5 .body h2{
+        color: hsl(217, 19%, 35%);
+    }
+    
+    .card-4{
+        background-color:var(--dark-card);
+    }
+    .cards .card:nth-child(4) .head img{
+        border-color: var(--violet-card)
+    }
+    .cards .card:last-child{
+        background-color: white;
+    }
+    .cards .card:nth-child(5) .head .name{
+        color: hsl(217, 19%, 35%)
+    }
+    .cards .card:nth-child(5) .footer p{
+        color: hsl(217, 19%, 35%);
+        opacity: 70%
+    }
+
+
+    @media (min-width:768px) and (max-width: 1023px) {
+        .container .cards {
+            grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+            justify-content: center;
+        }
+        .container .cards .card-5{
+            transform: translatex(50%)
+        }
+
+    
+    }
+    @media (min-width: 1024px) {
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: hsl(210, 46%, 95%)
+        }
+       .container .cards{
+            flex-basis:50%;
+            grid-template-columns: repeat(4,minmax(250px,1fr));
+            grid-template-rows: repeat(2,auto);
+            border-radius:10px
+        }
+        .card-1{
+            grid-area: 1/1/2/3;
+        }
+        .card-2{
+            grid-area: 1/3/2/4;
+            
+        }
+        .card-3{
+            grid-area: 2/1/3/2;
+            
+        }
+        .card-4{
+            grid-area: 2/2/3/4;
+            
+        }
+        .card-5{
+            grid-area: 1/4/3/5;
+            
+        }
+        
+    }

@@ -29,7 +29,6 @@ body{
     background-color: hsl(210, 46%, 95%)
 }
     .container .cards{
-        box-shadow: 10px 10px 20px -20px;
         flex-basis: 90%;
         display:grid;
         grid-template-columns: 1fr;
@@ -164,6 +163,7 @@ body{
             background-color: hsl(210, 46%, 95%)
         }
        .container .cards{
+            box-shadow: 10px 10px 20px -20px;
             flex-basis:50%;
             grid-template-columns: repeat(4,minmax(250px,1fr));
             grid-template-rows: repeat(2,auto);

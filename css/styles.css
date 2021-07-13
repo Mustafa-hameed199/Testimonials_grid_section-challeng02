@@ -29,6 +29,7 @@ body{
     background-color: hsl(210, 46%, 95%)
 }
     .container .cards{
+        box-shadow: 0 0 0 0 ;
         flex-basis: 90%;
         display:grid;
         grid-template-columns: 1fr;
@@ -150,8 +151,6 @@ body{
         .container .cards .card-5{
             transform: translatex(50%)
         }
-
-    
     }
     @media (min-width: 1024px) {
         .container{
